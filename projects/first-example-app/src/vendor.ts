@@ -6,7 +6,5 @@ import "@angular/common/http";
 import "@angular/router";
 import "rxjs";
 
-import * as moment from "moment";
 import "moment/min/locales";
-moment.locale('pl');
-(<any>window)['moment'] = moment;
+import "./styles.scss";

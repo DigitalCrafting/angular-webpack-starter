@@ -1,6 +1,6 @@
 var webpack = require('webpack');
 var helpers = require('../../helpers');
-var webpackMerge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var miniCssExtractPlugin = require('mini-css-extract-plugin');
 var commonConfig = require('./sea-webpack.common');
@@ -8,7 +8,7 @@ var aotPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
-module.exports = webpackMerge(commonConfig, {
+module.exports = merge(commonConfig, {
     mode: 'production',
 
     output: {

@@ -38,7 +38,14 @@ module.exports = {
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|tf|eot|ico)$/,
-                loader: 'file-loader?name=assets/[name].[hash].[ext]'
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: "./assets/[name].[hash].[ext]"
+                        }
+                    },
+                ]
             },
             {
                 test: /\.scss$/,
@@ -47,7 +54,8 @@ module.exports = {
                 ],
                 use: [
                     'to-string-loader',
-                    'raw-loader',
+                    'style-loader',
+                    'css-loader',
                     'sass-loader',
                     {
                         loader: 'sass-resources-loader',
