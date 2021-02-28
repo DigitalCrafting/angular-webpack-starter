@@ -1,7 +1,7 @@
 # angular-webpack-starter
-Starter for frontend app with webpack, angular, karma, jasmine
+Starter for frontend app with Webpack 5, Angular 11, Karma, Jasmine
 
-This configuration supports multiple projects which may have common parts, for example custom styles or controls.
+This configuration supports multiple projects which may have common parts, for example custom styles or controls. Each project will have it's own webpack configuration files and starting command.
 
 npm run start-* is like ng serve -> it starts project in development mode with hot reload
 
