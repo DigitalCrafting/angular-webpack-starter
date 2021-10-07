@@ -1,5 +1,5 @@
 # angular-webpack-starter
-Starter for frontend app with Webpack 5, Angular 11, Karma, Jasmine
+Starter for frontend app with Webpack 5, Angular 12, Karma, Jasmine
 
 This configuration supports multiple projects which may have common parts, for example custom styles or controls. Each project will have it's own webpack configuration files and starting command.
 
