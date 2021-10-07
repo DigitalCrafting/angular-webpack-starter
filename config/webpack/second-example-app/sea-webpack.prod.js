@@ -12,8 +12,8 @@ module.exports = merge(commonConfig, {
     mode: 'production',
 
     output: {
-        path: helpers.root('dist/dist-sea/public'),
-        publicPath: '/public/', // path to public on server
+        path: helpers.root('dist/dist-sea/'),
+        publicPath: '', // path to public on server
         filename: '[name].[hash].js',
         chunkFilename: '[id].[hash].chunk.js'
     },

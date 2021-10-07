@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  first-example-app:
+    build:
+      context: .
+      dockerfile: Dockerfile-fea
+    ports:
+      - "8080:80"
+
+  second-example-app:
+    build:
+      context: .
+      dockerfile: Dockerfile-sea
+    ports:
+      - "8081:80"
