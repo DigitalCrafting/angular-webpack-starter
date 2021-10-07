@@ -4,7 +4,7 @@ const { merge } = require('webpack-merge');
 var htmlWebpackPlugin = require('html-webpack-plugin');
 var miniCssExtractPlugin = require('mini-css-extract-plugin');
 var commonConfig = require('./fea-webpack.common');
-var aotPlugin = require('@ngtools/webpack').AngularCompilerPlugin;
+var aotPlugin = require('@ngtools/webpack').AngularWebpackPlugin;
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
@@ -27,7 +27,7 @@ module.exports = merge(commonConfig, {
         ]
     },
     optimization: {
-        noEmitOnErrors: true
+        emitOnErrors: false
     },
 
     plugins: [
@@ -36,7 +36,7 @@ module.exports = merge(commonConfig, {
             base_path: '' // your application base path from production url
         }),
         new aotPlugin({
-            tsConfigPath: 'projects/first-example-app/tsconfig.app.json',
+            tsconfig: 'projects/first-example-app/tsconfig.app.json',
             entryModule: 'projects/first-example-app/src/app/app.module#AppModule'
         }),
         new miniCssExtractPlugin({
