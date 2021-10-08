@@ -48,27 +48,6 @@ module.exports = {
                 ]
             },
             {
-                test: /\.scss$/,
-                include: [
-                    helpers.root('projects/second-example-app/src')
-                ],
-                use: [
-                    'to-string-loader',
-                    'style-loader',
-                    'css-loader',
-                    'sass-loader',
-                    {
-                        loader: 'sass-resources-loader',
-                        options: {
-                            resources: [
-                                './assets/scss/_vars.scss',
-                                './assets/scss/_mixins.scss'
-                            ]
-                        }
-                    }
-                ]
-            },
-            {
                 test: /\.css$/,
                 exclude: [
                     helpers.root('projects/first-example-app/src')

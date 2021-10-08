@@ -23,6 +23,25 @@ module.exports = merge(commonConfig, {
             {
                 test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts|\.d\.ts)$/,
                 loader: '@ngtools/webpack'
+            },
+            {
+                test: /\.scss$/,
+                include: [
+                    helpers.root('projects/first-example-app/src')
+                ],
+                use: [
+                    'raw-loader',
+                    'sass-loader',
+                    {
+                        loader: 'sass-resources-loader',
+                        options: {
+                            resources: [
+                                './assets/scss/_vars.scss',
+                                './assets/scss/_mixins.scss'
+                            ]
+                        }
+                    }
+                ]
             }
         ]
     },
